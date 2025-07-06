@@ -68,7 +68,7 @@ MonoBehaviour:
     MoveSpeed: 2
     MinExp: 13
     MaxExp: 26
-    DropItem: 30000
+    DropItem: 30002
   - MonsterID: M0005
     Name: Orc rider
     Description: "\uD0C8 \uAC83\uC774 \uC788\uB294 \uC624\uD06C"
@@ -82,7 +82,7 @@ MonoBehaviour:
     MoveSpeed: 2
     MinExp: 14
     MaxExp: 28
-    DropItem: 30000
+    DropItem: 30002
   - MonsterID: M0006
     Name: "\uC591"
     Description: "\uD138\uC774 \uB9CE\uC740 \uC591\uC774\uB2E4"
@@ -96,7 +96,7 @@ MonoBehaviour:
     MoveSpeed: 2
     MinExp: 15
     MaxExp: 30
-    DropItem: 30000
+    DropItem: 30002
   - MonsterID: M0007
     Name: "\uB3FC\uC9C0"
     Description: "\uD551\uD06C\uBE5B \uB3FC\uC9C0"
@@ -110,7 +110,7 @@ MonoBehaviour:
     MoveSpeed: 4
     MinExp: 16
     MaxExp: 32
-    DropItem: 30000
+    DropItem: 30002
   - MonsterID: M0008
     Name: "\uADF8\uB8E8\uD2B8"
     Description: "\uC6C0\uC9C1\uC774\uB294 \uB098\uBB34 \uAD34\uBB3C"
@@ -124,7 +124,7 @@ MonoBehaviour:
     MoveSpeed: 2
     MinExp: 17
     MaxExp: 34
-    DropItem: 30000
+    DropItem: 30002
   - MonsterID: M0009
     Name: "\uACF0"
     Description: "\uACF6\uAC10\uC744 \uB358\uC838\uBCFC\uAE4C?"
@@ -138,7 +138,7 @@ MonoBehaviour:
     MoveSpeed: 5
     MinExp: 18
     MaxExp: 36
-    DropItem: 30000
+    DropItem: 30002
   - MonsterID: M0010
     Name: "\uD638\uB791\uC774"
     Description: "\uB5A1 \uD558\uB098 \uC8FC\uBA74 \uC548 \uC7A1\uC544 \uBA39\uB294\uB2E4"
@@ -152,4 +152,4 @@ MonoBehaviour:
     MoveSpeed: 5
     MinExp: 19
     MaxExp: 38
-    DropItem: 30000
+    DropItem: 30002

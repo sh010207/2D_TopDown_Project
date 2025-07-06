@@ -26,7 +26,7 @@ MonoBehaviour:
     MaxDef: 0
     MaxDefMul: 0
     Status: 10
-  - ItemID: 10001
+  - ItemID: 30002
     Name: "\uB9C9\uB300"
     Description: "\uB098\uBB34\uB85C \uB9CC\uB4E0 \uB9C9\uB300"
     UnlockLev: 1
@@ -39,7 +39,7 @@ MonoBehaviour:
     MaxDef: 0
     MaxDefMul: 0
     Status: 0
-  - ItemID: 10002
+  - ItemID: 30002
     Name: "\uBC29\uD328"
     Description: "\uB0A1\uC740 \uB098\uBB34\uB85C \uB9CC\uB4E0 \uBC29\uD328"
     UnlockLev: 1
@@ -52,7 +52,7 @@ MonoBehaviour:
     MaxDef: 5
     MaxDefMul: 1.2
     Status: 0
-  - ItemID: 10003
+  - ItemID: 30002
     Name: "\uB178\uB780\uBA38\uB9AC\uB760"
     Description: "\uB178\uB780\uC0C9 \uBA38\uB9AC\uB760"
     UnlockLev: 2
@@ -65,7 +65,7 @@ MonoBehaviour:
     MaxDef: 5
     MaxDefMul: 1.2
     Status: 0
-  - ItemID: 20000
+  - ItemID: 30002
     Name: "\uBE68\uAC15\uD3EC\uC158"
     Description: "HP\uB97C 50 \uD68C\uBCF5\uC2DC\uD0A8\uB2E4."
     UnlockLev: 1
@@ -78,7 +78,7 @@ MonoBehaviour:
     MaxDef: 0
     MaxDefMul: 0
     Status: 0
-  - ItemID: 20001
+  - ItemID: 30002
     Name: "\uD30C\uB791\uD3EC\uC158"
     Description: "MP\uB97C 50 \uD68C\uBCF5\uC2DC\uD0A8\uB2E4."
     UnlockLev: 1
@@ -91,7 +91,7 @@ MonoBehaviour:
     MaxDef: 0
     MaxDefMul: 0
     Status: 0
-  - ItemID: 20002
+  - ItemID: 30002
     Name: "\uBD84\uD64D\uD3EC\uC158"
     Description: "HP/MP\uB97C \uAC01\uAC01 50 \uD68C\uBCF5\uC2DC\uD0A8\uB2E4."
     UnlockLev: 2
@@ -104,7 +104,7 @@ MonoBehaviour:
     MaxDef: 0
     MaxDefMul: 0
     Status: 0
-  - ItemID: 20003
+  - ItemID: 30002
     Name: "\uD574\uB3C5\uC81C"
     Description: "\uC911\uB3C5\uC0C1\uD0DC\uB97C \uCE58\uB8CC\uD55C\uB2E4"
     UnlockLev: 2
@@ -117,7 +117,7 @@ MonoBehaviour:
     MaxDef: 0
     MaxDefMul: 0
     Status: 1
-  - ItemID: 30000
+  - ItemID: 30002
     Name: "\uC0DD\uC950\uC758 \uCE58\uC988"
     Description: "\uC0DD\uC950\uAC00 \uBB3C\uACE0 \uB2E4\uB2C8\uB358 \uCE58\uC988\uB2E4"
     UnlockLev: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
     MaxDef: 0
     MaxDefMul: 0
     Status: 0
-  - ItemID: 30001
+  - ItemID: 30002
     Name: "\uCC38\uC0C8\uAE43\uD138"
     Description: "\uCC38\uC0C8\uC5D0\uAC8C \uBF51\uC740 \uAE43\uD138"
     UnlockLev: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
     MaxDef: 0
     MaxDefMul: 0
     Status: 0
-  - ItemID: 30003
+  - ItemID: 30002
     Name: "\uB3D9\uBB3C\uC758 \uAC00\uC8FD"
     Description: "\uC9C8\uAE34 \uAC00\uC8FD"
     UnlockLev: 0
@@ -169,7 +169,7 @@ MonoBehaviour:
     MaxDef: 0
     MaxDefMul: 0
     Status: 0
-  - ItemID: 30004
+  - ItemID: 30002
     Name: "\uD1A0\uB07C\uC758 \uB2F9\uADFC"
     Description: "\uD1A0\uB07C\uAC00 \uBB3C\uACE0 \uB2E4\uB2C8\uB358 \uB2F9\uADFC"
     UnlockLev: 0
@@ -182,7 +182,7 @@ MonoBehaviour:
     MaxDef: 0
     MaxDefMul: 0
     Status: 0
-  - ItemID: 30005
+  - ItemID: 30002
     Name: "\uC591\uD138"
     Description: "\uC591\uC5D0\uAC8C \uBF51\uC740 \uD138"
     UnlockLev: 0

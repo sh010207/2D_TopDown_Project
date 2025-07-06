@@ -12,6 +12,5 @@ public class Item : MonoBehaviour
     {
         itemData = item;
         Debug.Log($"{itemData.Name}");
-
     }
 }

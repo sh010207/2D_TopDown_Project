@@ -65,6 +65,7 @@ public class MonsterStatManager : MonoBehaviour, IDamageble
 
     private void Die()
     {
+        this.gameObject.layer = LayerMask.NameToLayer("Default");
         monsterDieEvent?.Invoke();
         monsterAnimationController.DeadAnimation(true);
         Invoke("DestroyObject", 1f);
