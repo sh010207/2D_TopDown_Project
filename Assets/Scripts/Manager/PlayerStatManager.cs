@@ -93,7 +93,7 @@ public class PlayerStatManager : MonoBehaviour, IDamageble
     private void Die()
     {
         if (currentHp <= 0) return;
-        this.gameObject.layer = LayerMask.NameToLayer("Defalut");
+        this.gameObject.layer = LayerMask.NameToLayer("Default");
         _controller.DeadAnimaiton(true);
         Debug.Log("플레이어가 죽었습니다");
         Invoke("DisablePlayer", 1f);
