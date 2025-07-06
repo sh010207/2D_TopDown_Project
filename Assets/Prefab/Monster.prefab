@@ -9,10 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6401158023890453820}
-  - component: {fileID: 5227097067398814651}
   - component: {fileID: 9124645568456560228}
   - component: {fileID: 5380472817325066856}
   - component: {fileID: 7590204826098061506}
+  - component: {fileID: 5227097067398814651}
+  - component: {fileID: -2061448343261598404}
   m_Layer: 7
   m_Name: Monster
   m_TagString: Untagged
@@ -36,21 +37,6 @@ Transform:
   - {fileID: 2562030893394624749}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5227097067398814651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 837047958733855296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 883366fdf517d2947b28a51c38237bd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!61 &9124645568456560228
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -135,6 +121,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86ff5af3934f3cc489ff97db3b7567b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5227097067398814651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837047958733855296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 883366fdf517d2947b28a51c38237bd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &-2061448343261598404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837047958733855296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f463b25a271bdb940aa3e89491609392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3498353004706412494
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,6 +158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2562030893394624749}
   - component: {fileID: 3253906730381589698}
+  - component: {fileID: 512505177903073353}
   m_Layer: 7
   m_Name: MainSprite
   m_TagString: Untagged
@@ -219,3 +233,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &512505177903073353
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3498353004706412494}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c214847b041b0ac49a1b9a44b0d70f67, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

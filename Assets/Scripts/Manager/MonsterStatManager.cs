@@ -16,6 +16,7 @@ public enum MonsterStat
 public class MonsterStatManager : MonoBehaviour, IDamageble
 {
     public UnityAction takeDamageEvent;
+    public UnityAction monsterDieEvent;
 
     private MonsterData monsterData;
     private StatHandler statHandler;
@@ -26,9 +27,10 @@ public class MonsterStatManager : MonoBehaviour, IDamageble
     private float moveSpeed;
     private float attackSpeed;
 
-
+    private MonsterAnimationController monsterAnimationController;
     private void Awake()
     {
+        monsterAnimationController = GetComponent<MonsterAnimationController>();    
         monsterData =  MonsterSpawn.instance.ChacedMonster();
         statHandler = new StatHandler();
         Init();
@@ -58,7 +60,14 @@ public class MonsterStatManager : MonoBehaviour, IDamageble
 
     private void Die()
     {
-        Destroy(this.gameObject);
+        monsterDieEvent?.Invoke();
+        monsterAnimationController.DeadAnimation(true);
+        Invoke("DestroyObject", 2f);
+    }
+
+    private void DestroyObject()
+    {
+        Destroy(gameObject);
     }
 
     public float GetMonsterStat(MonsterStat stat )
@@ -82,6 +91,7 @@ public class MonsterStatManager : MonoBehaviour, IDamageble
 
     public void TakeDamage(float damage)
     {
+        monsterAnimationController.HitAnimation();
         float currentHP = statHandler.Sub(currentHp , damage);
         currentHp = currentHP;
         UpdateStat(MonsterStat.Hp);

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class MonsterController : MonoBehaviour
 {
+    private MonsterAnimationController animationController;
     private MonsterStatManager monsterStatManager;
     private Rigidbody2D rb;
     private BoxCollider2D boxCollider2D;
@@ -27,15 +28,18 @@ public class MonsterController : MonoBehaviour
     private void OnEnable()
     {
         monsterStatManager.takeDamageEvent += OnHitEvent;
+        monsterStatManager.monsterDieEvent += OnDieEvent;
     }
 
     private void OnDisable()
     {
         monsterStatManager.takeDamageEvent -= OnHitEvent;
+        monsterStatManager.monsterDieEvent -= OnDieEvent;
     }
 
     private void Awake()
     {
+        animationController = GetComponent<MonsterAnimationController>();
         boxCollider2D = GetComponent<BoxCollider2D>();
         monsterStatManager = GetComponent<MonsterStatManager>();
         rb = GetComponentInChildren<Rigidbody2D>();
@@ -91,10 +95,12 @@ public class MonsterController : MonoBehaviour
 
         if (Vector2.Distance(transform.position, target.position) >= attackRange)
         {
+            animationController.MoveAnimation(true);
             rb.MovePosition(rb.position + dir * moveSpeed * Time.fixedDeltaTime);
         }
         else
         {
+            animationController.MoveAnimation(false);
             rb.velocity = Vector2.zero;
         }
     }
@@ -123,7 +129,12 @@ public class MonsterController : MonoBehaviour
     private void OnHitEvent()
     {
         // duration은 무기에따라 변경 가능
-        StartCoroutine(StaggerCoroutine(0.5f));
+        StartCoroutine(StaggerCoroutine(1f));
+    }
+
+    private void OnDieEvent()
+    {
+        this.enabled = false;
     }
 
 

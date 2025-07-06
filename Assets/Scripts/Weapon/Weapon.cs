@@ -5,7 +5,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     // 임의적 무기 데미지와 공격 속도
-    private float damage = 10f;
+    private float damage = 100f;
     private float roataeSpeed = 100.0f;
     private float attackCoolDown = 0.5f;
 

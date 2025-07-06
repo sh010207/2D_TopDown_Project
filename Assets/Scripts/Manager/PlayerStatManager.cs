@@ -13,6 +13,7 @@ enum PlayerStat
 
 public class PlayerStatManager : MonoBehaviour, IDamageble
 {
+    private PlayerAnimationController _controller;
     private PlayerData _playerData;
     private StatHandler statHandler;
 
@@ -20,8 +21,14 @@ public class PlayerStatManager : MonoBehaviour, IDamageble
     private float damage;
     private float moveSpeed;
 
+    private void OnEnable()
+    {
+        this.gameObject.layer = LayerMask.NameToLayer("Player");
+    }
+
     private void Start()
     {
+        _controller = GetComponent<PlayerAnimationController>();
         _playerData = ResourceManager.instance.ResourceLoad<PlayerData>("PlayerData");
         statHandler = new StatHandler();
         Init();
@@ -37,6 +44,7 @@ public class PlayerStatManager : MonoBehaviour, IDamageble
 
     public void TakeDamage(float value)
     {
+        _controller.HitAnimation();
         currentHp = statHandler.Sub(currentHp, value);
         UpdateStat(PlayerStat.Hp);
         Debug.Log($"데미지를 받았습니다! 받은 데미지 {value}  현재 체력 : {currentHp}");
@@ -68,7 +76,14 @@ public class PlayerStatManager : MonoBehaviour, IDamageble
 
     private void Die()
     {
+        this.gameObject.layer = LayerMask.NameToLayer("Defalut");
+        _controller.DeadAnimaiton(true);
         Debug.Log("플레이어가 죽었습니다");
-        Application.Quit();
+        Invoke("DisablePlayer", 1f);
+    }
+
+    private void DisablePlayer()
+    {
+        this.gameObject.SetActive(false);
     }
 }

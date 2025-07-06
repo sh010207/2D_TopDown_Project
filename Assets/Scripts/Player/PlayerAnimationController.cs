@@ -25,4 +25,14 @@ public class PlayerAnimationController : MonoBehaviour
         }
     }
 
+    public void DeadAnimaiton(bool checkAnimation)
+    {
+        _animator.SetBool("IsDead", checkAnimation);
+    }
+
+    public void HitAnimation()
+    {
+        _animator.SetTrigger("IsHit");
+    }
+
 }
