@@ -39,6 +39,7 @@ public class PlayerStatManager : MonoBehaviour, IDamageble
     {
         currentHp = statHandler.Sub(currentHp, value);
         UpdateStat(PlayerStat.Hp);
+        Debug.Log($"데미지를 받았습니다! 받은 데미지 {value}  현재 체력 : {currentHp}");
     }
 
 
@@ -68,5 +69,6 @@ public class PlayerStatManager : MonoBehaviour, IDamageble
     private void Die()
     {
         Debug.Log("플레이어가 죽었습니다");
+        Application.Quit();
     }
 }

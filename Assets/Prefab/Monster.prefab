@@ -48,6 +48,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 883366fdf517d2947b28a51c38237bd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!61 &9124645568456560228
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -132,21 +135,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86ff5af3934f3cc489ff97db3b7567b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterData:
-    MonsterID: 
-    Name: 
-    Description: 
-    Attack: 0
-    AttackMul: 0
-    MaxHP: 0
-    MaxHPMul: 0
-    AttackRange: 0
-    AttackRangeMul: 0
-    AttackSpeed: 0
-    MoveSpeed: 0
-    MinExp: 0
-    MaxExp: 0
-    DropItem: 0
 --- !u!1 &3498353004706412494
 GameObject:
   m_ObjectHideFlags: 0

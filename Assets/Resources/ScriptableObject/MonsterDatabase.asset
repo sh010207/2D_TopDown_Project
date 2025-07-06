@@ -76,7 +76,7 @@ MonoBehaviour:
     AttackMul: 0.2
     MaxHP: 100
     MaxHPMul: 0.1
-    AttackRange: 2
+    AttackRange: 1
     AttackRangeMul: 0.5
     AttackSpeed: 1.15
     MoveSpeed: 2
@@ -90,7 +90,7 @@ MonoBehaviour:
     AttackMul: 0.2
     MaxHP: 150
     MaxHPMul: 0.1
-    AttackRange: 2
+    AttackRange: 1
     AttackRangeMul: 0.5
     AttackSpeed: 1.15
     MoveSpeed: 2
@@ -104,7 +104,7 @@ MonoBehaviour:
     AttackMul: 0.15
     MaxHP: 140
     MaxHPMul: 0.1
-    AttackRange: 2
+    AttackRange: 1
     AttackRangeMul: 0.5
     AttackSpeed: 1.2
     MoveSpeed: 4
@@ -118,7 +118,7 @@ MonoBehaviour:
     AttackMul: 0.15
     MaxHP: 130
     MaxHPMul: 0.1
-    AttackRange: 4
+    AttackRange: 1
     AttackRangeMul: 0.3
     AttackSpeed: 1.3
     MoveSpeed: 2
@@ -132,7 +132,7 @@ MonoBehaviour:
     AttackMul: 0.1
     MaxHP: 120
     MaxHPMul: 0.1
-    AttackRange: 4
+    AttackRange: 1
     AttackRangeMul: 0.3
     AttackSpeed: 1.35
     MoveSpeed: 5
@@ -146,7 +146,7 @@ MonoBehaviour:
     AttackMul: 0.1
     MaxHP: 150
     MaxHPMul: 0.1
-    AttackRange: 5
+    AttackRange: 1
     AttackRangeMul: 0.2
     AttackSpeed: 1.4
     MoveSpeed: 5

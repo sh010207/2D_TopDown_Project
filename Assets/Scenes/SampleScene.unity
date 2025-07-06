@@ -2467,9 +2467,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPos:
   - {fileID: 1699411599}
-  - {fileID: 444819507}
-  - {fileID: 1775571339}
-  - {fileID: 202034551}
   monsterPrefab: {fileID: 837047958733855296, guid: 8920b9804ebfb884bb15d67133764fb4, type: 3}
 --- !u!4 &1174859705
 Transform:
@@ -2835,6 +2832,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 54100710032360772, guid: 3ffae6e93a1c41c46b6f128f1f33f2c2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3864883672524499934, guid: 3ffae6e93a1c41c46b6f128f1f33f2c2, type: 3}
       propertyPath: monsterLayer.m_Bits
       value: 128

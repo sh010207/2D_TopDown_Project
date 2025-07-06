@@ -1,16 +1,22 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 
-enum MonsterStat
+public enum MonsterStat
 {
     Hp,
-    Damage
+    Damage,
+    AttackRange,
+    AttackSpeed,
+    MoveSpeed
 }
 
 public class MonsterStatManager : MonoBehaviour, IDamageble
 {
+    public UnityAction takeDamageEvent;
+
     private MonsterData monsterData;
     private StatHandler statHandler;
 
@@ -19,6 +25,7 @@ public class MonsterStatManager : MonoBehaviour, IDamageble
     private float attackRange;
     private float moveSpeed;
     private float attackSpeed;
+
 
     private void Awake()
     {
@@ -54,9 +61,23 @@ public class MonsterStatManager : MonoBehaviour, IDamageble
         Destroy(this.gameObject);
     }
 
-    public void GetMonsterData(MonsterData data)
+    public float GetMonsterStat(MonsterStat stat )
     {
-        monsterData = data;
+        switch(stat)
+        {
+            case MonsterStat.Hp:
+                return currentHp;
+            case MonsterStat.Damage:
+                return damage;
+            case MonsterStat.AttackSpeed:
+                return attackSpeed;
+            case MonsterStat.AttackRange:
+                return attackRange;
+            case MonsterStat.MoveSpeed:
+                return moveSpeed;
+            default:
+                return 0f;
+        }
     }
 
     public void TakeDamage(float damage)
@@ -65,5 +86,6 @@ public class MonsterStatManager : MonoBehaviour, IDamageble
         currentHp = currentHP;
         UpdateStat(MonsterStat.Hp);
         Debug.Log($"{currentHp}");
+        takeDamageEvent?.Invoke();
     }
 }
