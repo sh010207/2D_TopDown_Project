@@ -2,6 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
+enum PlayerStat
+{
+    Hp,
+    Damage,
+    MoveSpeed
+}
 
 public class PlayerStatManager : MonoBehaviour, IDamageble
 {
@@ -30,22 +38,35 @@ public class PlayerStatManager : MonoBehaviour, IDamageble
     public void TakeDamage(float value)
     {
         currentHp = statHandler.Sub(currentHp, value);
-        UpdateStat(value);
+        UpdateStat(PlayerStat.Hp);
     }
 
 
-    private void UpdateStat(float vlaue)
+    private void UpdateStat(PlayerStat stat)
     {
-        if (currentHp <= 0)
+        switch(stat)
         {
-            Die();
+            case PlayerStat.Hp:
+                if (currentHp <= 0) 
+                    Die();
+                break;
+            case PlayerStat.Damage:
+                break;
+            case PlayerStat.MoveSpeed:
+                break;
         }
 
         // UI 호출하면서 업데이트 시켜주는
     }
 
+    public float GetPlayerDamage()
+    {
+        float value = damage;
+        return value;
+    }
+
     private void Die()
     {
-
+        Debug.Log("플레이어가 죽었습니다");
     }
 }

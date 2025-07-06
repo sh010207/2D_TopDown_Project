@@ -8,13 +8,11 @@ public class ResourceManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        Debug.Log($"{instance.name}");
     }
 
     public T ResourceLoad<T>(string name) where T : Object
     {
         T data = Resources.Load<T>($"ScriptableObject/{name}");
-        Debug.Log($"{data.name}");
         return data;
     }
 }
