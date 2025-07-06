@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
     private void TossDamage(float value)
     {
-        value = statManager.GetPlayerDamage();
+        value = statManager.GetPlayerStat(PlayerStat.Damage);
         controller.SetPlayerDamage(value);
     }
     

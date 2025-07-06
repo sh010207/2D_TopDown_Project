@@ -17,15 +17,18 @@ public class MonsterStatManager : MonoBehaviour, IDamageble
 {
     public UnityAction takeDamageEvent;
     public UnityAction monsterDieEvent;
+    public UnityAction<float,float> hpChangeEvent;
 
     private MonsterData monsterData;
     private StatHandler statHandler;
 
     private float damage;
-    private float currentHp;
+    private float hp;
     private float attackRange;
     private float moveSpeed;
     private float attackSpeed;
+    private float maxHp;
+    private int itemID;
 
     private MonsterAnimationController monsterAnimationController;
     private void Awake()
@@ -39,10 +42,12 @@ public class MonsterStatManager : MonoBehaviour, IDamageble
     private void Init()
     {
         damage = monsterData.Attack;
-        currentHp = monsterData.MaxHP;
+        hp = monsterData.MaxHP;
+        maxHp = monsterData.MaxHP;
         attackRange = monsterData.AttackRange;
         moveSpeed = monsterData.MoveSpeed;
         attackSpeed = monsterData.AttackSpeed;
+        itemID = monsterData.DropItem;
     }
 
     private void UpdateStat(MonsterStat value)
@@ -50,7 +55,7 @@ public class MonsterStatManager : MonoBehaviour, IDamageble
         switch(value)
         {
             case MonsterStat.Hp:
-                if (currentHp <= 0) 
+                if (hp <= 0) 
                     Die();            
                 break;
             case MonsterStat.Damage:
@@ -62,7 +67,9 @@ public class MonsterStatManager : MonoBehaviour, IDamageble
     {
         monsterDieEvent?.Invoke();
         monsterAnimationController.DeadAnimation(true);
-        Invoke("DestroyObject", 2f);
+        Invoke("DestroyObject", 1f);
+        ItemManager.Instance.CachedItem(itemID);
+        ItemManager.Instance.CreateItem(this.transform);
     }
 
     private void DestroyObject()
@@ -75,7 +82,7 @@ public class MonsterStatManager : MonoBehaviour, IDamageble
         switch(stat)
         {
             case MonsterStat.Hp:
-                return currentHp;
+                return hp;
             case MonsterStat.Damage:
                 return damage;
             case MonsterStat.AttackSpeed:
@@ -92,10 +99,10 @@ public class MonsterStatManager : MonoBehaviour, IDamageble
     public void TakeDamage(float damage)
     {
         monsterAnimationController.HitAnimation();
-        float currentHP = statHandler.Sub(currentHp , damage);
-        currentHp = currentHP;
+        float currentHP = statHandler.Sub(hp, damage);
+        hp = currentHP;
         UpdateStat(MonsterStat.Hp);
-        Debug.Log($"{currentHp}");
         takeDamageEvent?.Invoke();
+        hpChangeEvent?.Invoke(hp, maxHp);
     }
 }

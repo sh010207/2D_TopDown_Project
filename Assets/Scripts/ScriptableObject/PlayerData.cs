@@ -8,4 +8,5 @@ public class PlayerData : ScriptableObject
     public float HP;
     public float Damage;
     public float MoveSpeed;
+    public float MaxHp;
 }
